@@ -1,0 +1,120 @@
+:root {
+    --cor-fundo: black;
+    --cor-texto: white;
+    --cor-borda: #555;
+    --cor-controles-fundo: #FFF2CC;
+    --cor-cabecalho-fundo: #333;
+    --cor-cabecalho-texto: #FFF2CC;
+
+    --cor-turno-fundo: #8EA9DB;
+    --cor-turno-texto: black;
+    --cor-matriz-fundo: #BDD7EE;
+    --cor-matriz-texto: black;
+    
+    --cor-folga-fundo: #b30000;
+    --cor-folga-texto: white;
+    --cor-dia-atual-fundo: #FFD700;
+    --cor-dia-atual-texto: black;
+    --cor-celula-vazia: #222;
+
+    --cor-fds-cabecalho-fundo: #611a1a;
+    --cor-fds-cabecalho-texto: #f0f0f0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.controls {
+    background-color: var(--cor-controles-fundo);
+    color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.controls select, .controls input {
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 25px;
+    table-layout: fixed;
+}
+
+td, th {
+    border: 1px solid var(--cor-borda);
+    padding: 8px;
+    text-align: center;
+    height: 50px; 
+    position: relative;
+}
+
+th {
+    background-color: var(--cor-cabecalho-fundo);
+    color: var(--cor-cabecalho-texto);
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.turno {
+    background-color: var(--cor-turno-fundo);
+    color: var(--cor-turno-texto);
+    font-weight: bold;
+    width: 60px;
+}
+
+/* --- REGRAS DE COR E DESTAQUE --- */
+
+.matriz {
+    background-color: var(--cor-matriz-fundo);
+    color: var(--cor-matriz-texto);
+}
+
+.folga {
+    background-color: var(--cor-folga-fundo);
+    color: var(--cor-folga-texto);
+    font-weight: bold;
+}
+
+.dia-atual-coluna {
+    background-color: var(--cor-dia-atual-fundo);
+    color: var(--cor-dia-atual-texto);
+}
+
+.fim-de-semana-cabecalho {
+    background-color: var(--cor-fds-cabecalho-fundo);
+    color: var(--cor-fds-cabecalho-texto);
+}
+
+.empty {
+    background-color: var(--cor-celula-vazia);
+    border-color: var(--cor-fundo);
+}
+
+/* Borda de destaque para a célula e o CABEÇALHO do dia atual */
+.hoje-borda {
+    outline: 3px solid white;
+    outline-offset: -3px;
+}
+
+/* Adicionando a borda ao cabeçalho também */
+th.dia-atual-coluna {
+    outline: 3px solid white;
+    outline-offset: -3px;
+}
